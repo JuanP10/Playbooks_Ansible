@@ -1,0 +1,9 @@
+- name: Instalar htop en todos los servidores
+  hosts: servidores
+  become: true
+  tasks:
+    - name: Instalar htop
+      apt:
+        name: htop
+        state: present
+        update_cache: yes
