@@ -1,0 +1,8 @@
+- name: Mensaje de estado de cada servidor
+  hosts: servidores
+  gather_facts: false
+  tasks:
+    - name: Mostrar mensaje personalizado
+      debug:
+        msg: "Soy el servidor {{ inventory_hostname }} y estoy funcionando"
+
