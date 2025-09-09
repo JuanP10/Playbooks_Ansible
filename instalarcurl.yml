@@ -1,0 +1,9 @@
+- name: Instalar curl en todos los servidores
+  hosts: servidores
+  become: true
+  tasks:
+    - name: Instalar curl
+      apt:
+        name: curl
+        state: present
+        update_cache: yes
